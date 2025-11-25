@@ -1,6 +1,7 @@
 import express from "express";
 import {
   createStudent,
+  LoginStudent,
   //   getAllStudents,
   //   getStudent,
 } from "../controllers/studentcontroller.js";
@@ -8,8 +9,7 @@ import {
 const router = express.Router();
 
 // Routes
-router.post("/createStudent", createStudent); // Create
-// router.get("/", getAllStudents); // Get all
-// router.get("/:id", getStudent); // Get one
+router.post("/register", createStudent);
+router.post("/login", LoginStudent);
 
 export default router;

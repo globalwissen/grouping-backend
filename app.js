@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectMasterDB } from "./config/masterDb.js";
 import StudentsRoutes from "./routes/students.js";
+import GroupsRoutes from "./routes/grou.js";
 
 dotenv.config(); // ← must come first
 
@@ -11,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/students", StudentsRoutes);
+app.use("/api/groups", GroupsRoutes);
+
 // Connect Master DB
 connectMasterDB();
 
